@@ -29,8 +29,12 @@ int score(String word) {
     'Z': 10
   };
 
-  return word
-      .split("")
-      .map((letter) => letterValue[letter.toUpperCase()])
-      .fold(0, (previousValue, element) => previousValue + element!);
+  // return word
+  //     .split("")
+  //     .map((letter) => letterValue[letter.toUpperCase()])
+  //     .fold(0, (previousValue, element) => previousValue + element!);
+  return word.split("").fold(
+      0,
+      (previousValue, element) =>
+          previousValue + letterValue[element.toUpperCase()]!);
 }
